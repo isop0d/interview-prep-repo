@@ -6,7 +6,7 @@ class binary_heap:
     def __init__(self):
         self.heap = [0]
 
-    def find_parent(self, i):
+    def find_parent(self, i:int):
         return math.floor(i/2)
 
     def get_min(self):
@@ -16,7 +16,7 @@ class binary_heap:
         else:
             return self.heap[1]
     
-    def insert(self, val):
+    def insert(self, val:int):
 
         if len(self.heap) <= 1:
             self.heap.append(val)
@@ -31,7 +31,7 @@ class binary_heap:
             self.heap[i] = tmp
             i = i//2
     
-    def delete_i(self, i):
+    def delete_i(self, i:int):
         if len(self.heap) <= 1:
             print ("No heap yet...")
             return 
