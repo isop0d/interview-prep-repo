@@ -22,7 +22,7 @@ class binary_heap:
         self.heap.append(val)
         i = len(self.heap) - 1
 
-        while self.heap[(i//2)] > self.heap[i]:
+        while self.heap[(i//2)] > self.heap[i] and i > 1:
             tmp = self.heap[(i//2)]
             self.heap[(i//2)] = self.heap[i]
             self.heap[i] = tmp
@@ -52,25 +52,25 @@ class binary_heap:
             
 
             
-    
-h = binary_heap()
-h.insert(5)
-h.insert(10)
-h.insert(3)
-h.insert(1)
-h.insert(4)
-h.insert(6)
-print(h.heap)
-print(h.get_min())
-h.delete_i(1)
-print(h.heap)
+if __name__ == "__main__":    
+    h = binary_heap()
+    h.insert(5)
+    h.insert(10)
+    h.insert(3)
+    h.insert(1)
+    h.insert(4)
+    h.insert(6)
+    print(h.heap)
+    print(h.get_min())
+    h.delete_i(1)
+    print(h.heap)
 
 '''
 
         0
         1
        / \
-      3   5
-     / \
-    10  4
+      3    5
+     / \  /
+    10  4 6
 '''
