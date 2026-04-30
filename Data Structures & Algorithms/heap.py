@@ -6,9 +6,6 @@ class binary_heap:
     def __init__(self):
         self.heap = [0]
 
-    def find_parent(self, i:int):
-        return math.floor(i/2)
-
     def get_min(self):
         if len(self.heap) <= 1:
             print("No heap yet...")
